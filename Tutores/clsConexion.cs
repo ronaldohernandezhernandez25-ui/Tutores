@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Tutores
 {
-    internal class clsConexio
+    internal class clsConexion
     {
         private string host = "189.240.192.140";
         private string bd = "bdescuelagbequipo6";
