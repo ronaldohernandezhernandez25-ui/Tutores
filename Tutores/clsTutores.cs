@@ -86,4 +86,74 @@ namespace Tutores
             return tabla;
         }
     }
+
+    public string GuardarActualizar(int tipoOperacion)
+        {
+            string msg = "";
+            try
+            {
+
+                clsConexion conexionBD = new clsConexion();
+                using (var conexion = conexionBD.AbrirConexion())
+                {
+
+                    switch (tipoOperacion)
+                    {
+                        case 0:
+                            //registro nuevo
+                            string sqlN = "insert into tbltutores  (nombreTutor,parentesco, direccion,telefono,correo) values(@nombreTutor, @parentesco,@direccion,@telefono,@email)";
+                            using (comando = new MySqlCommand(sqlN, conexion))
+                            {
+                                comando.Parameters.AddWithValue("nombreTutor", nombreTutor);
+                                comando.Parameters.AddWithValue("parentesco", parentesco);
+                                comando.Parameters.AddWithValue("direccion", direccion);
+                                comando.Parameters.AddWithValue("telefono", telefono);
+                                comando.Parameters.AddWithValue("email", email);
+
+                                int filasAfectadas = comando.ExecuteNonQuery();
+                                if (filasAfectadas > 0)
+                                {
+                                    msg = "El registro se guardó correctamente";
+                                }
+                                else
+                                {
+                                    msg = "Error, no se guardaron los  datos....";
+                                }
+                            }
+                            break;
+                        case 1:
+                            string sqlA = "UPDATE tbltutores C SET C.nombreTutor = @nombreTutor, C.parentesco = @parentesco, C.direccion = @direccion, C.telefono = @telefono, C.correo = @email  WHERE C.idTutor = @idTutor";
+                            using (comando = new MySqlCommand(sqlA, conexion))
+                            {
+
+                                comando.Parameters.AddWithValue("idTutor", idTutor);
+                                comando.Parameters.AddWithValue("nombreTutor", nombreTutor);
+                                comando.Parameters.AddWithValue("parentesco", parentesco);
+                                comando.Parameters.AddWithValue("direccion", direccion);
+                                comando.Parameters.AddWithValue("telefono", telefono);
+                                comando.Parameters.AddWithValue("email", email);
+
+                                int filasAfectadas = comando.ExecuteNonQuery();
+                                if (filasAfectadas > 0)
+                                {
+                                    msg = "El registro se guardó correctamente";
+                                }
+                                else
+                                {
+                                    msg = "Error, no se guardaron los  datos....";
+                                }
+                            }
+                            break;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error" + ex.Message);
+            }
+            return msg;
+        }
+    }
+
 }
