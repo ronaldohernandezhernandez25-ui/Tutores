@@ -1,8 +1,8 @@
 namespace Tutores
 {
-    public partial class frmTutores : Form
+    public partial class frmtutores : Form
     {
-        public frmTutores()
+        public frmtutores()
         {
             InitializeComponent();
         }

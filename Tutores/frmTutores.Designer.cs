@@ -1,6 +1,6 @@
 ﻿namespace Tutores
 {
-    partial class frmTutores
+    partial class frmtutores
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTutores));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmtutores));
             lblTitulo = new Label();
             pnlTutores = new Panel();
+            txtTelefonoTutor = new TextBox();
+            txtEmailTutor = new TextBox();
+            txtDireccionTutor = new TextBox();
+            txtNombreTutor = new TextBox();
+            txtPrentescoTutor = new TextBox();
             button1 = new Button();
             btnEliminarTutor = new Button();
             btnNuevoTutor = new Button();
             dgvTutores = new DataGridView();
             txtBuscarTutor = new TextBox();
-            txtPrentescoTutor = new TextBox();
-            txtNombreTutor = new TextBox();
-            txtDireccionTutor = new TextBox();
-            txtEmailTutor = new TextBox();
-            txtTelefonoTutor = new TextBox();
             pnlTutores.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvTutores).BeginInit();
             SuspendLayout();
@@ -67,8 +67,53 @@
             pnlTutores.Controls.Add(btnNuevoTutor);
             pnlTutores.Location = new Point(174, 127);
             pnlTutores.Name = "pnlTutores";
-            pnlTutores.Size = new Size(998, 417);
+            pnlTutores.Size = new Size(998, 391);
             pnlTutores.TabIndex = 1;
+            // 
+            // txtTelefonoTutor
+            // 
+            txtTelefonoTutor.Font = new Font("Book Antiqua", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtTelefonoTutor.Location = new Point(208, 190);
+            txtTelefonoTutor.Name = "txtTelefonoTutor";
+            txtTelefonoTutor.PlaceholderText = "Ingrese el telefono del tutor";
+            txtTelefonoTutor.Size = new Size(607, 36);
+            txtTelefonoTutor.TabIndex = 8;
+            // 
+            // txtEmailTutor
+            // 
+            txtEmailTutor.Font = new Font("Book Antiqua", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtEmailTutor.Location = new Point(208, 246);
+            txtEmailTutor.Name = "txtEmailTutor";
+            txtEmailTutor.PlaceholderText = "Ingrese el email del tutor";
+            txtEmailTutor.Size = new Size(607, 36);
+            txtEmailTutor.TabIndex = 7;
+            // 
+            // txtDireccionTutor
+            // 
+            txtDireccionTutor.Font = new Font("Book Antiqua", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtDireccionTutor.Location = new Point(208, 140);
+            txtDireccionTutor.Name = "txtDireccionTutor";
+            txtDireccionTutor.PlaceholderText = "Ingrese la direccion del tutor";
+            txtDireccionTutor.Size = new Size(607, 36);
+            txtDireccionTutor.TabIndex = 6;
+            // 
+            // txtNombreTutor
+            // 
+            txtNombreTutor.Font = new Font("Book Antiqua", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtNombreTutor.Location = new Point(208, 25);
+            txtNombreTutor.Name = "txtNombreTutor";
+            txtNombreTutor.PlaceholderText = "Ingrese el nombre completo del tutor";
+            txtNombreTutor.Size = new Size(607, 36);
+            txtNombreTutor.TabIndex = 5;
+            // 
+            // txtPrentescoTutor
+            // 
+            txtPrentescoTutor.Font = new Font("Book Antiqua", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtPrentescoTutor.Location = new Point(208, 84);
+            txtPrentescoTutor.Name = "txtPrentescoTutor";
+            txtPrentescoTutor.PlaceholderText = "Ingrese el parentesco";
+            txtPrentescoTutor.Size = new Size(607, 36);
+            txtPrentescoTutor.TabIndex = 4;
             // 
             // button1
             // 
@@ -103,7 +148,7 @@
             // dgvTutores
             // 
             dgvTutores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTutores.Location = new Point(108, 601);
+            dgvTutores.Location = new Point(115, 569);
             dgvTutores.Name = "dgvTutores";
             dgvTutores.RowHeadersWidth = 51;
             dgvTutores.Size = new Size(1126, 188);
@@ -111,69 +156,28 @@
             // 
             // txtBuscarTutor
             // 
-            txtBuscarTutor.Font = new Font("Book Antiqua", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtBuscarTutor.Location = new Point(1006, 559);
+            txtBuscarTutor.Font = new Font("Book Antiqua", 15F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtBuscarTutor.Location = new Point(1006, 524);
             txtBuscarTutor.Name = "txtBuscarTutor";
             txtBuscarTutor.PlaceholderText = "Buscar Tutor";
-            txtBuscarTutor.Size = new Size(166, 36);
+            txtBuscarTutor.Size = new Size(166, 39);
             txtBuscarTutor.TabIndex = 3;
             // 
-            // txtPrentescoTutor
-            // 
-            txtPrentescoTutor.Font = new Font("Book Antiqua", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPrentescoTutor.Location = new Point(208, 84);
-            txtPrentescoTutor.Name = "txtPrentescoTutor";
-            txtPrentescoTutor.PlaceholderText = "Ingrese el parentesco";
-            txtPrentescoTutor.Size = new Size(607, 36);
-            txtPrentescoTutor.TabIndex = 4;
-            // 
-            // txtNombreTutor
-            // 
-            txtNombreTutor.Font = new Font("Book Antiqua", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtNombreTutor.Location = new Point(208, 25);
-            txtNombreTutor.Name = "txtNombreTutor";
-            txtNombreTutor.PlaceholderText = "Ingrese el nombre completo del tutor";
-            txtNombreTutor.Size = new Size(607, 36);
-            txtNombreTutor.TabIndex = 5;
-            // 
-            // txtDireccionTutor
-            // 
-            txtDireccionTutor.Font = new Font("Book Antiqua", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtDireccionTutor.Location = new Point(208, 140);
-            txtDireccionTutor.Name = "txtDireccionTutor";
-            txtDireccionTutor.PlaceholderText = "Ingrese la direccion del tutor";
-            txtDireccionTutor.Size = new Size(607, 36);
-            txtDireccionTutor.TabIndex = 6;
-            // 
-            // txtEmailTutor
-            // 
-            txtEmailTutor.Font = new Font("Book Antiqua", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtEmailTutor.Location = new Point(208, 246);
-            txtEmailTutor.Name = "txtEmailTutor";
-            txtEmailTutor.PlaceholderText = "Ingrese el email del tutor";
-            txtEmailTutor.Size = new Size(607, 36);
-            txtEmailTutor.TabIndex = 7;
-            // 
-            // txtTelefonoTutor
-            // 
-            txtTelefonoTutor.Font = new Font("Book Antiqua", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtTelefonoTutor.Location = new Point(208, 190);
-            txtTelefonoTutor.Name = "txtTelefonoTutor";
-            txtTelefonoTutor.PlaceholderText = "Ingrese el telefono del tutor";
-            txtTelefonoTutor.Size = new Size(607, 36);
-            txtTelefonoTutor.TabIndex = 8;
-            // 
-            // frmTutores
+            // frmtutores
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1366, 801);
             Controls.Add(txtBuscarTutor);
             Controls.Add(dgvTutores);
             Controls.Add(pnlTutores);
             Controls.Add(lblTitulo);
+            DoubleBuffered = true;
             Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Name = "frmTutores";
+            ForeColor = SystemColors.ControlText;
+            Name = "frmtutores";
             Text = "Tutores";
             pnlTutores.ResumeLayout(false);
             pnlTutores.PerformLayout();
